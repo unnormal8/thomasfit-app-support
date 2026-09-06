@@ -1,0 +1,73 @@
+{
+  "artifact": {
+    "bytes": 34459648,
+    "categoryCount": 6,
+    "databaseBuildTimestamp": "2026-05-05T20:33:30Z",
+    "distinctBarcodeCount": 100000,
+    "fileHeaderJournalMode": "wal",
+    "fileName": "thomasfit-open-food-facts-derivative-37f60ab122e7.sqlite",
+    "integrityCheck": "ok",
+    "nonemptyBarcodeCount": 100000,
+    "rowCount": 100000,
+    "runtimeOpenMode": "read-only immutable",
+    "schemaColumns": [
+      "id",
+      "name",
+      "brand",
+      "category",
+      "barcode",
+      "calories_per_100g",
+      "protein_per_100g",
+      "carbs_per_100g",
+      "fat_per_100g",
+      "fiber_per_100g",
+      "sugar_per_100g",
+      "saturated_fat_per_100g",
+      "sodium_per_100g",
+      "default_portion_grams",
+      "portion_name"
+    ],
+    "sha256": "37f60ab122e7dfbab5e41127d47b8dbc26dac1000dbae025ac493483902314d7"
+  },
+  "binaryMapping": {
+    "bundledResource": "baseline-foods.sqlite",
+    "sourceCommit": "cc188fb809ec180f75c6eb5af301728e67670f17",
+    "verification": "Match the bundled resource SHA-256 to artifact.sha256."
+  },
+  "licenses": {
+    "contents": {
+      "name": "DbCL 1.0",
+      "url": "https://opendatacommons.org/licenses/dbcl/1-0/"
+    },
+    "database": {
+      "name": "ODbL 1.0",
+      "url": "https://opendatacommons.org/licenses/odbl/1-0/"
+    }
+  },
+  "publication": {
+    "appStoreReleaseGatePassed": false,
+    "publicURL": null,
+    "status": "prepared_not_published"
+  },
+  "schemaVersion": 1,
+  "transformations": {
+    "script": "build_massive_food_database.py",
+    "scriptSHA256": "db757e83c3143ebdbeb2519008c3a314cdb0f1a40cbbb0cacaa5962e3fc55d44",
+    "summary": [
+      "filter records with usable product names and nutrition",
+      "normalize names, brands, categories, barcodes and portions",
+      "sanitize calories and macro values",
+      "map to the ThomasFit SQLite schema",
+      "build indexes and the FTS search index"
+    ]
+  },
+  "upstream": {
+    "attribution": "© Open Food Facts contributors",
+    "dumpURL": "https://static.openfoodfacts.org/data/openfoodfacts-products.jsonl.gz",
+    "exactSourceDumpRetained": false,
+    "exactSourceDumpSHA256": null,
+    "name": "Open Food Facts",
+    "provenanceNote": "The exact historical source dump was not retained. This package therefore distributes the byte-identical shipped derivative and its transformation code, but cannot reproduce the historical import from an authenticated dump snapshot.",
+    "url": "https://openfoodfacts.org"
+  }
+}
